@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manas Strava Aktivitātes</title>
+    <style>
+        :root {
+            --strava-orange: #FC4C02;
+            --bg-color: #f5f5f7;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--strava-orange);
+        }
+
+        header h1 {
+            color: var(--strava-orange);
+            margin-bottom: 10px;
+        }
+
+        /* Aktivitāšu tīkla izkārtojums */
+        .activity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Katras aktivitātes kartītes dizains */
+        .activity-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-title {
+            padding: 15px 20px;
+            font-weight: bold;
+            font-size: 1.1em;
+            background-color: #fafafa;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        /* Ietvars Strava iframe, lai saglabātu pareizas proporcijas */
+        .strava-embed-container {
+            position: relative;
+            width: 100%;
+            /* Strava parasti izmanto 450px augstumu standarta embediem */
+            height: 450px; 
+        }
+
+        .strava-embed-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Rīgas Satiksmes maršrutu gājieni</h1>
+        <p></p>
+    </header>
+
+    <main class="activity-grid">
+        
+        <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="20651087032" data-style="standard" data-from-embed="false" data-token="UqEcixrEtHonK4YzVZ-aP5GusOXz5f1e8CBhDOl8Tms"></div><script src="https://strava-embeds.com/embed.js"></script>
+
+        <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="19192053943" data-style="standard" data-from-embed="false" data-token="SXXKZSUmVeOW__qPO_u-1k9NhxZTkP-XECDnSWtgX6E"></div><script src="https://strava-embeds.com/embed.js"></script>
+
+        <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="19125743776" data-style="standard" data-from-embed="false" data-token="X1zEWWVwV-z3wItJoTOobQDAJHSC-g9dh0m2n-toZrU"></div><script src="https://strava-embeds.com/embed.js"></script>
+
+        <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="19124672594" data-style="standard" data-from-embed="false" data-token="09pomB1tq3HOQrKuw1H4aPqB_aZtxxqd7vUy2MGcO5Y"></div><script src="https://strava-embeds.com/embed.js"></script>
+
+        <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="19124239245" data-style="standard" data-from-embed="false" data-token="k4xRH7DXni3CDe0j9cGw8uGPcZ1G0QjZboJLJamAmRQ"></div><script src="https://strava-embeds.com/embed.js"></script>
+
+        <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="19113331834" data-style="standard" data-from-embed="false" data-token="hnwrYK5B9-G1ae8OIM1nwnuOrYaykSxQpCUjp38K7bk"></div><script src="https://strava-embeds.com/embed.js"></script>
+
+        </main>
+
+</body>
+</html>
